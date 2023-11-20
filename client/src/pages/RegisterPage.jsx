@@ -3,7 +3,7 @@ import '../assets/css/RegisterPage.css';
 import Cake from '../assets/img/birthday-cake.png';
 import { useAuth } from '../context/AuthContext';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function RegisterPage() {
 
@@ -45,7 +45,7 @@ function RegisterPage() {
                 <p className='text-red-400'>El <span className='font-bold'>correo</span> es <span className='font-bold'>requerido</span></p>
               )
             }
-            <input type="password" {...register("password", {required: true, minLength: 8})} placeholder='Contraseña' className='w-full bg-zinc-700 px-4 py-2 my-2'/>
+            <input type="password" {...register("password", {required: true})} placeholder='Contraseña' className='w-full bg-zinc-700 px-4 py-2 my-2'/>
             {
               errors.password && (
                 <p className='text-red-400'>La <span className='font-bold'>contraseña</span> es <span className='font-bold'>requerida</span></p>
@@ -53,6 +53,7 @@ function RegisterPage() {
             }
             <button type="submit" className='w-full cursor-pointer bg-pink-700 py-2 my-2'>Registrarse</button>
           </form>
+          <Link to="/login"><p className='text-right underline cursor-pointer'>¿Ya tienes cuenta?</p></Link>
         </div>
       </div>
     </div>
