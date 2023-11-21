@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+.titulo {
+  font-family: 'Lilita One', sans-serif;
+  letter-spacing: 5px;
+}
+
+.lema {
+  font-family: Nabla, sans-serif;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 33ch;
+  animation: typing 2s steps(31), blink 0.5s infinite step-end alternate;
+  -webkit-animation: typing 2s steps(31), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.home {
+  min-height: calc(100vh);
+  overflow: hidden;
+}
+
+button:hover {
+  transition: all 0.1s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}

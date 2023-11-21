@@ -55,9 +55,9 @@ function BirthdayFormPage() {
           <form onSubmit={onSubmit}>
             <input type="text" placeholder='Nombre del cumpleañero' autoFocus {...register("name", {required: true})} className='w-full bg-zinc-700 px-4 py-2 my-2'/>
             <select id="opciones" name="opciones" {...register("relationship", {required: true})} className='w-full bg-zinc-700 px-4 py-2 my-2 cursor-pointer'>
-              <option value="Friend">Amigo/a</option>
-              <option value="Couple">Pareja</option>
-              <option value="Pet">Mascota</option>
+              <option value="Amigo/a">Amigo/a</option>
+              <option value="Pareja">Pareja</option>
+              <option value="Mascota">Mascota</option>
             </select>
             <input type="date" placeholder='Fecha de su cumpleaños' {...register("date", {required: true})} className='w-full bg-zinc-700 px-4 py-2 my-2'/>
             <button type="submit" className='w-full cursor-pointer  bg-pink-700 py-2 my-2'>Añadir cumpleaños</button>

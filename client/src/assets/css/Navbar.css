@@ -1,0 +1,16 @@
+nav {
+  height: 50px;
+}
+
+/* Estilo personalizado para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #262626;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(24 24 27 / 0.5);;
+}

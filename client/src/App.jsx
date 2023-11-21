@@ -16,6 +16,7 @@ function App() {
       <BirthdayProvider>
         <BrowserRouter>
         <Navbar />
+        <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage/>} />
@@ -27,7 +28,8 @@ function App() {
               <Route path="/birthdays/:id" element={<BirthdayFormPage />} />
               <Route path="/profile" element={<ProfilePage />} />
             </Route>
-          </Routes>
+        </Routes>
+        </main>
         </BrowserRouter>
       </BirthdayProvider>
     </AuthProvider>
