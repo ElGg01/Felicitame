@@ -1,17 +1,24 @@
 import Cake from '../assets/img/birthday-cake.png';
 import {useForm} from 'react-hook-form';
 import { useAuth } from '../context/AuthContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function LoginPage() {
 
   const {register, handleSubmit, formState: {errors}} = useForm();
 
-  const {signin, errors: signinErrors} = useAuth();
+  const {signin, errors: signinErrors, isAuthenticated} = useAuth();
+
+  const navigate = useNavigate();
 
   const onSubmit = handleSubmit(data => {
     signin(data);
   });
+
+  useEffect(() => {
+    if(isAuthenticated) navigate("/birthdays");
+  }, [isAuthenticated]);
   
   return (
     <div className='flex justify-center items-center h-screen relative backdrop-blur-0 bg-neutral-900/50'>
