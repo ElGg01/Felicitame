@@ -1,4 +1,4 @@
-import Cake from '../assets/img/birthday-cake.png';
+// import Cake from '../assets/img/birthday-cake.png';
 import {useForm} from 'react-hook-form';
 import { useAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
@@ -24,7 +24,7 @@ function LoginPage() {
     <div className='flex justify-center items-center h-screen relative backdrop-blur-0 bg-neutral-900/50'>
       <div className="night-background blur-2xl opacity-10 absolute top-0 -z-10 w-full h-full rounded"></div>
       <div>
-        <img src={Cake} className='w-1/4 sm:w-1/5 block mx-auto'/>
+        <img src="https://res.cloudinary.com/dgzivrbtk/image/upload/v1700613290/Felicitame/enmobb2pdhh3kyj0yrn6.png" className='w-1/4 sm:w-1/5 block mx-auto'/>
         <h1 className='text-center text-4xl my-4 font-bold'>FELICITA.ME</h1>
         <div className='bg-zinc-500/60 px-4 py-4 mx-2 backdrop-blur-0 rounded'>
           <h1 className='text-center my-2 font-bold'>INICIA SESIÓN:</h1>
