@@ -26,8 +26,10 @@ function BirthdayCard({ birthday }) {
             />
           </div>
           </div>
-        <div className="w-full overflow-hidden whitespace-nowrap">
-          <h1 className="text-center font-bold text-4xl">{birthday.name}</h1>
+        <div className="w-full">
+          <div className="bg-red-500/30 p-1 rounded-xl">
+            <h1 className="text-center font-bold text-3xl overflow-hidden text-ellipsis whitespace-nowrap">{birthday.name}</h1>
+          </div>
           <h2 className="text-center">{birthday.relationship}</h2>
           <h3 className="text-center font-bold text-2xl">
             {dayjs(birthday.date).utc().format("DD/MM/YYYY")}

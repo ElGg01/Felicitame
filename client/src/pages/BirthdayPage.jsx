@@ -19,8 +19,10 @@ function BirthdayPage() {
         </div>
 
         <div className='min-h-screen flex justify-center items-center'>
-          <h1>NO HAY CUMPLEAÑOS</h1>
+          <h1 className='font-bold'>NO HAY CUMPLEAÑOS</h1>
         </div>
+
+        <Link to="/add-birthday"><div className='bg-green-400 fixed p-4 rounded-lg font-bold text-4xl cursor-pointer right-4 bottom-10'><p>+</p></div></Link>
       </div>
     );
   }
