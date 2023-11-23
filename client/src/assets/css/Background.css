@@ -6,8 +6,8 @@
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   filter: blur(calc(500px/5));
   -webkit-filter: blur(calc(500px/5));
-  animation: rotate 25s ease-in-out alternate infinite;
-  -webkit-animation: rotate 25s ease-in-out alternate infinite;
+  animation: beat 2s ease infinite, rotate 25s ease-in-out alternate infinite;
+  -webkit-animation: beat 2s ease infinite, rotate 25s ease-in-out alternate infinite;
 }
 
 @keyframes rotate {
@@ -16,5 +16,17 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes beat {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
   }
 }

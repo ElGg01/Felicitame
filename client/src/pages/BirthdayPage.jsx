@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useBirthdays } from '../context/BirthdayContext';
 import BirthdayCard from '../components/BirthdayCard';
+import { Link } from 'react-router-dom';
 
 function BirthdayPage() {
 
@@ -12,19 +13,25 @@ function BirthdayPage() {
 
   if (birthdays.length === 0) {
     return(
-      <div className='flex justify-center items-center h-screen relative backdrop-blur-0 bg-neutral-900/50'>
-        <div className="night-background blur-2xl opacity-10 absolute top-0 -z-10 w-full h-full rounded"></div>
-        <div>
-        <h1 className='font-bold'>NO HAY CUMPLEAÑOS</h1>
+      <div className='relative home'>
+        <div className='absolute w-full h-full flex justify-center items-center overflow-hidden -z-10'>
+          <div className="gradient -z-10 top-2/4 left-2/4"></div>
+        </div>
+
+        <div className='min-h-screen flex justify-center items-center'>
+          <h1>NO HAY CUMPLEAÑOS</h1>
         </div>
       </div>
     );
   }
 
   return (
-    <div className='grid grid-cols-3 gap-2 min-h-screen relative backdrop-blur-0 bg-neutral-900/50'>
-      <div className="night-background blur-2xl opacity-10 absolute top-0 -z-10 w-full h-full rounded"></div>
-      <div className='m-4'>
+    <div className='relative home'>
+      <div className='absolute w-full h-full flex justify-center items-center overflow-hidden -z-10'>
+        <div className="gradient -z-10 top-2/4 left-2/4"></div>
+      </div>
+      
+      <div className='flex flex-wrap justify-center gap-4 mx-4 my-8'>
         {
           birthdays.map(birthday => {
             return(
@@ -33,6 +40,8 @@ function BirthdayPage() {
           })
         }
       </div>
+      
+      <Link to="/add-birthday"><div className='bg-green-400 fixed p-4 rounded-lg font-bold text-4xl cursor-pointer right-4 bottom-10'><p>+</p></div></Link>
     </div>
   )
 }
