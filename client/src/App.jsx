@@ -14,7 +14,7 @@ function App() {
   return (
     <AuthProvider>
       <BirthdayProvider>
-        <BrowserRouter>
+        <BrowserRouter basename=''>
         <Navbar />
         <main>
           <Routes>
