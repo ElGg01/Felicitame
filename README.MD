@@ -11,4 +11,4 @@
 - Moverse a la carpeta **"client"** y ejecutar de nuevo **NPM INSTALL**, para instalar todas las dependencias del frontend.
 - Ejecutar **NPM RUN BUILD**.
 - Mover el contenido de la carpeta build a un servidor como Apache.
-- Ejecutar el backend en segundo plano usando PM2 con sus respectivas configuraciones en caso de reinicio del servidor.
+- Ejecutar el backend en segundo plano usando **PM2** con sus respectivas configuraciones en caso de reinicio del servidor.

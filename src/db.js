@@ -1,12 +1,10 @@
-import mongoose from 'mongoose';
-
-const MONGODB_URI = "mongodb+srv://ElGg:MongoAtlas-135@cluster0.op6xvfo.mongodb.net/felicitame?retryWrites=true&w=majority";
+import mongoose from "mongoose";
 
 export const connectDB = async () => {
   try {
-    await mongoose.connect(MONGODB_URI);
-    console.log("Base de datos conectada")
+    await mongoose.connect("mongodb://localhost/felicitame");
+    console.log("Base de datos conectada");
   } catch (error) {
-      console.log(error);
+    console.log(error);
   }
 }
